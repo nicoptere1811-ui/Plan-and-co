@@ -1,0 +1,135 @@
+/* Modern Icon System */
+.service-icon,
+.service-detail-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-icon::before,
+.service-detail-icon::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--card-bg);
+    border-radius: 14px;
+    z-index: 1;
+}
+
+.service-icon svg,
+.service-detail-icon svg {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 2;
+    stroke: url(#iconGradient);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.service-card:hover .service-icon,
+.service-detail:hover .service-detail-icon {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.feature-icon::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.feature-icon svg {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 2;
+    stroke: url(#iconGradient);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Visual Card Icons */
+.visual-emoji {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-emoji::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.visual-emoji svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    stroke: url(#iconGradient);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Section Tag Icons */
+.section-tag svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* SVG Gradient Definition */
+.icon-gradient-defs {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

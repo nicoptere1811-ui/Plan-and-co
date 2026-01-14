@@ -1,0 +1,252 @@
+/* ===================================
+   IMAGE REPLACEMENTS WITH GRADIENTS
+   Fallback pour images manquantes
+   =================================== */
+
+/* Blog images avec gradients */
+.blog-image img[src*="blog-1.jpg"],
+.blog-image img[src*="blog-2.jpg"],
+.blog-image img[src*="blog-3.jpg"],
+.blog-image img[src*="blog-4.jpg"],
+.blog-image img[src*="blog-5.jpg"],
+.blog-image img[src*="blog-6.jpg"],
+.blog-image img[src*="blog-7.jpg"],
+.blog-image img[src*="blog-8.jpg"],
+.blog-image img[src*="blog-9.jpg"],
+.blog-image img[src*="blog-featured.jpg"] {
+    display: none;
+}
+
+.blog-card:nth-child(1) .blog-image,
+.blog-card.featured .blog-image {
+    background: linear-gradient(135deg, #E67E22 0%, #F39C12 50%, #F8B500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blog-card:nth-child(1) .blog-image::before,
+.blog-card.featured .blog-image::before {
+    content: '✍️';
+    font-size: 5rem;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.blog-card:nth-child(2) .blog-image {
+    background: linear-gradient(135deg, #F8B500 0%, #E67E22 50%, #D35400 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(2) .blog-image::before {
+    content: '🔍';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(3) .blog-image {
+    background: linear-gradient(135deg, #E74C3C 0%, #E67E22 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(3) .blog-image::before {
+    content: '🏗️';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(4) .blog-image {
+    background: linear-gradient(135deg, #F39C12 0%, #F8B500 50%, #E67E22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(4) .blog-image::before {
+    content: '💡';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(5) .blog-image {
+    background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(5) .blog-image::before {
+    content: '📧';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(6) .blog-image {
+    background: linear-gradient(135deg, #E67E22 0%, #F8B500 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(6) .blog-image::before {
+    content: '📊';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(7) .blog-image {
+    background: linear-gradient(135deg, #F8B500 0%, #F39C12 50%, #E67E22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(7) .blog-image::before {
+    content: '🏠';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(8) .blog-image {
+    background: linear-gradient(135deg, #E67E22 0%, #E74C3C 50%, #D35400 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(8) .blog-image::before {
+    content: '📖';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+.blog-card:nth-child(9) .blog-image {
+    background: linear-gradient(135deg, #F39C12 0%, #E67E22 50%, #F8B500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-card:nth-child(9) .blog-image::before {
+    content: '🎯';
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+/* Service batiment images */
+.product-image img[src*="service-batiment"],
+.product-main-image img[src*="product-page-vente"] {
+    display: none;
+}
+
+.product-card:nth-child(1) .product-image,
+.product-main-image {
+    background: linear-gradient(135deg, #E67E22 0%, #F39C12 50%, #F8B500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(1) .product-image::before,
+.product-main-image::before {
+    content: '📄';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+.product-card:nth-child(2) .product-image {
+    background: linear-gradient(135deg, #F8B500 0%, #E67E22 50%, #D35400 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(2) .product-image::before {
+    content: '🏷️';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+.product-card:nth-child(3) .product-image {
+    background: linear-gradient(135deg, #E74C3C 0%, #E67E22 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(3) .product-image::before {
+    content: '📝';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+.product-card:nth-child(4) .product-image {
+    background: linear-gradient(135deg, #F39C12 0%, #F8B500 50%, #E67E22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(4) .product-image::before {
+    content: '🔍';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+.product-card:nth-child(5) .product-image {
+    background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(5) .product-image::before {
+    content: '📋';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+.product-card:nth-child(6) .product-image {
+    background: linear-gradient(135deg, #E67E22 0%, #F8B500 50%, #F39C12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card:nth-child(6) .product-image::before {
+    content: '📦';
+    font-size: 6rem;
+    opacity: 0.3;
+    color: white;
+}
+
+
+
+/* Animation pour les icônes */
+.blog-image::before,
+.product-image::before,
+.product-main-image::before {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

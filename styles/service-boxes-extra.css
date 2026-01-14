@@ -1,0 +1,39 @@
+.visual-box.box-9 {
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 70%;
+    background-image: url('../images/service-homepage-creation.png');
+    background-size: cover;
+    background-position: center;
+    animation: floating 3s ease-in-out infinite 0.9s;
+}
+
+.visual-box.box-10 {
+    top: 8%;
+    right: 10%;
+    width: 76%;
+    height: 72%;
+    background-image: url('../images/service-construction-building.png');
+    background-size: cover;
+    background-position: center;
+    animation: floating 3s ease-in-out infinite 1s;
+}
+
+.visual-box.box-11 {
+    top: 10%;
+    left: 10%;
+    width: 75%;
+    height: 70%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    animation: floating 3s ease-in-out infinite 1.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.visual-box.box-11::before {
+    content: '📱';
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactez Plan and Co pour vos projets de copywriting. Devis gratuit et réponse rapide.">
+    <title>Contact - Plan and Co | Demandez votre devis</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Plan & Co</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="creation-sites-web.html" class="nav-link">Sites Web</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="landing.html" class="nav-link btn-primary-nav">Offre Spéciale</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-tag">Contactez-moi</span>
+                <h1 class="page-title">Discutons de <span class="gradient-text">votre projet</span></h1>
+                <p class="page-description">
+                    Vous avez un projet en tête ? Parlons-en ! Je vous réponds sous 24h.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="form-title">Envoyez-moi un message</h2>
+
+                    <!-- Info Box about Questionnaire -->
+                    <div
+                        style="background: linear-gradient(135deg, #FFF8F0 0%, #FFFBF7 100%); padding: 20px; border-radius: 10px; margin-bottom: 25px; border-left: 4px solid #E67E22;">
+                        <div style="display: flex; align-items: flex-start; gap: 15px;">
+                            <div style="font-size: 2rem; flex-shrink: 0;">📋</div>
+                            <div>
+                                <h3 style="color: #E67E22; margin-bottom: 8px; font-size: 1.1rem;">Processus de
+                                    collaboration</h3>
+                                <p style="color: #555; margin-bottom: 10px; line-height: 1.6;">
+                                    Après réception de votre demande, je vous enverrai un <strong>questionnaire
+                                        détaillé</strong> pour mieux comprendre vos besoins et votre projet.
+                                </p>
+                                <p style="color: #555; margin: 0; line-height: 1.6;">
+                                    ✓ Cela me permettra de vous proposer une <strong>solution parfaitement
+                                        adaptée</strong> et un <strong>devis précis</strong> sous 24h.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/planandco9@gmail.com"
+                        method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required
+                                    placeholder="Jean">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required
+                                    placeholder="Dupont">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="_replyto" class="form-input" required
+                                    placeholder="jean.dupont@exemple.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    placeholder="06 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">Entreprise</label>
+                            <input type="text" id="company" name="company" class="form-input"
+                                placeholder="Nom de votre entreprise">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service souhaité *</label>
+                            <select id="service" name="service" class="form-select" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="page-vente">Page de vente</option>
+                                <option value="article-blog">Article de blog</option>
+                                <option value="page-categorie">Page de catégorie</option>
+                                <option value="fiche-produit">Fiche produit</option>
+                                <option value="landing-page">Landing page</option>
+                                <option value="emailing">E-mailing / Newsletter</option>
+                                <option value="seo">Référencement SEO</option>
+                                <option value="site-internet">Création de site internet</option>
+                                <option value="homepage">Création de homepage</option>
+                                <option value="batiment">Spécialité Bâtiment</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Budget estimé</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="">Sélectionnez votre budget</option>
+                                <option value="moins-500">Moins de 500€</option>
+                                <option value="500-1000">500€ - 1000€</option>
+                                <option value="1000-2500">1000€ - 2500€</option>
+                                <option value="2500-5000">2500€ - 5000€</option>
+                                <option value="plus-5000">Plus de 5000€</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Votre message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required
+                                placeholder="Décrivez votre projet en quelques mots..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span>J'accepte d'être contacté par Plan & Co concernant ma demande *</span>
+                            </label>
+                        </div>
+
+                        <!-- Champ caché pour Formspree -->
+                        <input type="hidden" name="_subject" value="Nouvelle demande de contact - Plan & Co">
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            Envoyer ma demande
+                        </button>
+
+                        <p class="form-note">* Champs obligatoires</p>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✓</div>
+                        <h3>Message envoyé avec succès !</h3>
+                        <p>Merci pour votre message. Je vous répondrai dans les plus brefs délais.</p>
+                        <div
+                            style="margin-top: 15px; padding: 15px; background: rgba(230, 126, 34, 0.1); border-radius: 8px;">
+                            <p style="margin: 0; color: #E67E22; font-weight: 600;">
+                                📋 Prochaine étape : Vous recevrez un questionnaire détaillé par email pour affiner
+                                votre projet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title">Informations de contact</h3>
+                        <p class="contact-info-text">
+                            N'hésitez pas à me contacter directement par téléphone ou email.
+                            Je suis disponible du lundi au vendredi de 9h à 18h.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-detail-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:planandco9@gmail.com">planandco9@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-detail-content">
+                                    <h4>Téléphone</h4>
+                                    <a href="tel:0640286297">06 40 28 62 97</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">📘</div>
+                                <div class="contact-detail-content">
+                                    <h4>Facebook</h4>
+                                    <a href="https://facebook.com/planandco" target="_blank">Plan and Co</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">⏰</div>
+                                <div class="contact-detail-content">
+                                    <h4>Disponibilité</h4>
+                                    <p>Lun - Ven : 9h - 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title">Pourquoi me choisir ?</h3>
+                        <ul class="contact-benefits">
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <span>Réponse sous 24h garantie</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <span>Devis gratuit et sans engagement</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <span>Formation en copywriting</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <span>Expertise secteur bâtiment</span>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">✓</span>
+                                <span>Techniques de persuasion éprouvées</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-cta-card">
+                        <h3>Besoin d'une réponse rapide ?</h3>
+                        <p>Appelez-moi directement pour discuter de votre projet</p>
+                        <a href="tel:0640286297" class="btn btn-secondary btn-full">
+                            📞 Appeler maintenant
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quels sont vos délais de livraison ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Les délais varient selon le type de projet. En général, comptez 3-5 jours pour un article de
+                            blog, 7-10 jours pour une page de vente, et 2-3 semaines pour un projet SEO complet. Je
+                            m'adapte à vos urgences si nécessaire.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Comment se déroule la collaboration ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Après votre demande, nous échangeons sur vos besoins. Je vous envoie un devis détaillé. Une
+                            fois accepté, je commence par une phase de recherche et d'analyse, puis je rédige le
+                            contenu. Vous avez droit à 2 révisions incluses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Proposez-vous des forfaits mensuels ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui ! Je propose des forfaits mensuels pour les entreprises ayant des besoins réguliers en
+                            contenu (articles de blog, newsletters, etc.). Contactez-moi pour un devis personnalisé.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Travaillez-vous avec tous les secteurs ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, je peux travailler sur tout type de sujet. J'ai une spécialisation dans le secteur du
+                            bâtiment, mais mon expertise en copywriting s'applique à tous les domaines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Garantissez-vous les résultats ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Je m'engage à créer du contenu de qualité basé sur les meilleures pratiques de copywriting et
+                            de SEO. Cependant, les résultats dépendent aussi de nombreux autres facteurs (votre offre,
+                            votre marché, votre stratégie globale). Je vous accompagne pour maximiser vos chances de
+                            succès.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Plan & Co</h3>
+                    <p class="footer-description">
+                        Expert en copywriting et rédaction web. Transformez vos mots en résultats mesurables.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Pages de vente</a></li>
+                        <li><a href="services.html">Articles de blog</a></li>
+                        <li><a href="services.html">Landing pages</a></li>
+                        <li><a href="creation-sites-web.html">Sites Web</a></li>
+                        <li><a href="creation-sites-web.html">Homepage</a></li>
+                        <li><a href="services.html">SEO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📧 <a href="mailto:planandco9@gmail.com">planandco9@gmail.com</a></li>
+                        <li>📱 <a href="tel:0640286297">06 40 28 62 97</a></li>
+                        <li>📘 <a href="https://facebook.com/planandco" target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Plan & Co - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>

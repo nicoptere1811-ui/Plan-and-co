@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Client - Plan & Co</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #E67E22;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #E67E22;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: #E67E22;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #E67E22;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #E67E22;
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #E67E22;
+        }
+
+        .checkbox-item label {
+            cursor: pointer;
+            color: #555;
+        }
+
+        .subsection {
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .subsection-title {
+            font-size: 1.1rem;
+            color: #E67E22;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #E67E22;
+            text-align: center;
+            color: #777;
+        }
+
+        .footer-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .footer-info strong {
+            color: #E67E22;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                border: 1px solid #333;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .two-column,
+            .sector-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Plan <span>&</span> Co</div>
+            <h1>QUESTIONNAIRE CLIENT - Analyse de vos besoins</h1>
+            <p>Pour créer un contenu qui convertit</p>
+        </div>
+
+        <!-- Section 1: Informations Générales -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">📋</span>
+                1. INFORMATIONS GÉNÉRALES
+            </h2>
+
+            <div class="form-group">
+                <label class="form-label">Nom de l'entreprise *</label>
+                <input type="text" class="form-input" placeholder="Votre entreprise">
+            </div>
+
+            <div class="two-column">
+                <div class="form-group">
+                    <label class="form-label">Secteur d'activité *</label>
+                    <select class="form-select">
+                        <option value="">Sélectionnez...</option>
+                        <option value="batiment">Bâtiment</option>
+                        <option value="restaurant">Restaurant / Hôtellerie</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="services">Services / Consulting</option>
+                        <option value="sante">Santé / Bien-être</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Site web actuel</label>
+                    <input type="url" class="form-input" placeholder="https://www.exemple.com">
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="form-group">
+                    <label class="form-label">Contact principal *</label>
+                    <input type="text" class="form-input" placeholder="Nom et prénom">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email *</label>
+                    <input type="email" class="form-input" placeholder="contact@exemple.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Téléphone</label>
+                <input type="tel" class="form-input" placeholder="06 12 34 56 78">
+            </div>
+        </div>
+
+        <!-- Section 2: Votre Projet -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🚀</span>
+                2. VOTRE PROJET
+            </h2>
+
+            <div class="form-group">
+                <label class="form-label">Type de service souhaité *</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service1">
+                        <label for="service1">Pages de vente</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service2">
+                        <label for="service2">Articles de blog</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service3">
+                        <label for="service3">SEO</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service4">
+                        <label for="service4">Site web complet</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service5">
+                        <label for="service5">Package mensuel</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="service6">
+                        <label for="service6">Community Manager</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Objectifs principaux *</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="obj1">
+                        <label for="obj1">Augmenter les ventes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="obj2">
+                        <label for="obj2">Générer des leads</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="obj3">
+                        <label for="obj3">Améliorer la visibilité</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="obj4">
+                        <label for="obj4">Fidéliser les clients</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="form-group">
+                    <label class="form-label">Budget estimé</label>
+                    <select class="form-select">
+                        <option value="">Sélectionnez...</option>
+                        <option value="moins500">Moins de 500€</option>
+                        <option value="500-1000">500€ - 1000€</option>
+                        <option value="1000-2500">1000€ - 2500€</option>
+                        <option value="2500-5000">2500€ - 5000€</option>
+                        <option value="plus5000">Plus de 5000€</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Délai souhaité</label>
+                    <input type="text" class="form-input" placeholder="Ex: 2 semaines, 1 mois">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Votre Audience Cible -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                3. VOTRE AUDIENCE CIBLE
+            </h2>
+
+            <div class="form-group">
+                <label class="form-label">Qui sont vos clients idéaux ? *</label>
+                <textarea class="form-textarea"
+                    placeholder="Décrivez votre client type (profession, âge, situation...)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Quels sont leurs problèmes/besoins principaux ? *</label>
+                <textarea class="form-textarea" placeholder="Quels problèmes résolvez-vous pour eux ?"></textarea>
+            </div>
+
+            <div class="two-column">
+                <div class="form-group">
+                    <label class="form-label">Où se trouvent-ils ? (géographique)</label>
+                    <input type="text" class="form-input" placeholder="Ex: Paris et région parisienne">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Tranche d'âge principale</label>
+                    <input type="text" class="form-input" placeholder="Ex: 30-50 ans">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Questions Spécifiques par Secteur -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🏢</span>
+                4. QUESTIONS SPÉCIFIQUES PAR SECTEUR
+            </h2>
+            <p style="color: #777; margin-bottom: 20px; font-style: italic;">Remplissez uniquement la section
+                correspondant à votre secteur d'activité</p>
+
+            <!-- Bâtiment -->
+            <div class="subsection">
+                <h3 class="subsection-title">🏗️ BÂTIMENT</h3>
+
+                <div class="form-group">
+                    <label class="form-label">Type de travaux</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="bat1">
+                            <label for="bat1">Rénovation</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="bat2">
+                            <label for="bat2">Construction neuve</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="bat3">
+                            <label for="bat3">Spécialité (précisez)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label class="form-label">Zone d'intervention</label>
+                        <input type="text" class="form-input" placeholder="Départements ou régions">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Certifications/labels</label>
+                        <input type="text" class="form-input" placeholder="RGE, Qualibat, etc.">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Projets types / Réalisations phares</label>
+                    <textarea class="form-textarea"
+                        placeholder="Décrivez vos projets les plus représentatifs"></textarea>
+                </div>
+            </div>
+
+            <!-- E-commerce -->
+            <div class="subsection">
+                <h3 class="subsection-title">🛒 E-COMMERCE</h3>
+
+                <div class="form-group">
+                    <label class="form-label">Produits vendus</label>
+                    <textarea class="form-textarea" placeholder="Décrivez vos produits principaux"></textarea>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label class="form-label">Plateforme utilisée</label>
+                        <input type="text" class="form-input" placeholder="Shopify, WooCommerce, PrestaShop...">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Trafic mensuel actuel</label>
+                        <input type="text" class="form-input" placeholder="Nombre de visiteurs/mois">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Taux de conversion actuel (si connu)</label>
+                    <input type="text" class="form-input" placeholder="Ex: 2%">
+                </div>
+            </div>
+
+            <!-- Services/Consulting -->
+            <div class="subsection">
+                <h3 class="subsection-title">💼 SERVICES / CONSULTING</h3>
+
+                <div class="form-group">
+                    <label class="form-label">Services proposés</label>
+                    <textarea class="form-textarea" placeholder="Listez vos principaux services"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Votre expertise unique</label>
+                    <textarea class="form-textarea"
+                        placeholder="Qu'est-ce qui vous différencie des autres consultants ?"></textarea>
+                </div>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label class="form-label">Types de clients actuels</label>
+                        <input type="text" class="form-input" placeholder="PME, grandes entreprises, particuliers...">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Témoignages disponibles ?</label>
+                        <select class="form-select">
+                            <option value="">Sélectionnez...</option>
+                            <option value="oui">Oui</option>
+                            <option value="non">Non</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant/Hôtellerie -->
+            <div class="subsection">
+                <h3 class="subsection-title">🍽️ RESTAURANT / HÔTELLERIE</h3>
+
+                <div class="two-column">
+                    <div class="form-group">
+                        <label class="form-label">Type de cuisine/établissement</label>
+                        <input type="text" class="form-input" placeholder="Française, Italienne, Hôtel 3*, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Ambiance/positionnement</label>
+                        <input type="text" class="form-input" placeholder="Gastronomique, familial, moderne...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Spécialités / Points forts</label>
+                    <textarea class="form-textarea"
+                        placeholder="Plats signatures, chef étoilé, terrasse, vue..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Localisation précise</label>
+                    <input type="text" class="form-input" placeholder="Ville, quartier">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Votre Différence -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">👑</span>
+                5. VOTRE DIFFÉRENCE
+            </h2>
+
+            <div class="form-group">
+                <label class="form-label">Qu'est-ce qui vous rend unique ? *</label>
+                <textarea class="form-textarea"
+                    placeholder="Votre valeur ajoutée, ce qui vous distingue de la concurrence"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Pourquoi choisir vous plutôt qu'un concurrent ?</label>
+                <textarea class="form-textarea" placeholder="Arguments de vente, avantages compétitifs"></textarea>
+            </div>
+
+            <div class="two-column">
+                <div class="form-group">
+                    <label class="form-label">Vos valeurs d'entreprise</label>
+                    <textarea class="form-textarea" placeholder="Qualité, innovation, proximité..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Votre histoire</label>
+                    <textarea class="form-textarea"
+                        placeholder="Création de l'entreprise, parcours du fondateur..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: Contenu Existant -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">📝</span>
+                6. CONTENU EXISTANT
+            </h2>
+
+            <div class="form-group">
+                <label class="form-label">Avez-vous déjà du contenu (site, brochures, réseaux sociaux) ?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cont1">
+                        <label for="cont1">Oui, beaucoup</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cont2">
+                        <label for="cont2">Un peu</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cont3">
+                        <label for="cont3">Non, rien</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Ton de communication souhaité *</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ton1">
+                        <label for="ton1">Professionnel</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ton2">
+                        <label for="ton2">Convivial</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ton3">
+                        <label for="ton3">Technique</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ton4">
+                        <label for="ton4">Inspirant</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Mots-clés importants pour votre activité</label>
+                <textarea class="form-textarea"
+                    placeholder="Listez les mots-clés sur lesquels vous souhaitez être visible"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Concurrents à analyser</label>
+                <textarea class="form-textarea" placeholder="Sites web de vos principaux concurrents (URLs)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Informations complémentaires</label>
+                <textarea class="form-textarea"
+                    placeholder="Tout autre élément important que nous devrions connaître"></textarea>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Merci d'avoir pris le temps de remplir ce questionnaire !</strong></p>
+            <div class="footer-info">
+                <p><strong>Plan & Co</strong> - Expert en Copywriting & Rédaction Web</p>
+                <p>📧 planandco9@gmail.com | 📱 06 40 28 62 97</p>
+                <p>Une fois complété, envoyez ce questionnaire par email pour recevoir votre devis personnalisé sous
+                    24h.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour imprimer ou sauvegarder en PDF
+        function printForm() {
+            window.print();
+        }
+
+        // Vous pouvez ajouter un bouton d'impression si nécessaire
+        // Ajoutez ce code juste avant la fermeture du body si vous voulez un bouton d'impression
+        /*
+        const printButton = document.createElement('button');
+        printButton.textContent = '🖨️ Imprimer / Sauvegarder en PDF';
+        printButton.style.cssText = 'position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #E67E22; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);';
+        printButton.onclick = printForm;
+        document.body.appendChild(printButton);
+        */
+    </script>
+</body>
+
+</html>
